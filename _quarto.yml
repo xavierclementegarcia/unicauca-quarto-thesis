@@ -12,7 +12,7 @@ book:
   output-file: "quarto-thesis"
   date: 2025-01-07
   #site-url: https://xavierclementegarcia.github.io/unicauca-quarto-thesis/
-  repo-url: https://github.com/xavierclementegarcia/unicauca-quarto-thesis
+  repo-url: https://github.com/xavierclementegarcia/unicauca-quarto-thesis/
   title: "Plantilla para desarrollo de trabajos de grado con Quarto de la Universidad del Cauca"
   author:
     - name: "Nombre Primer Autor"
