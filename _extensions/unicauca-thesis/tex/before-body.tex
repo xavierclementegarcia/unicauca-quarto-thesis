@@ -1,0 +1,220 @@
+%-------------------------------------------------------------------------------
+%	PORTADA
+%-------------------------------------------------------------------------------
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+
+$if(title)$
+\cleardoublepage
+\thispagestyle{empty}
+
+{\centering
+{\bfseries $title$}\\[2cm]
+\includegraphics{assets/unicauca_vertical.png}
+\vspace{1cm}
+
+%Datos del autor.
+\vspace{1cm}
+$if(by-author)$
+$for(by-author)$
+$if(by-author.name.literal)$
+{$by-author.name.literal$}\\
+$endif$
+$endfor$
+$endif$
+
+\vspace{2cm}
+$if(tipo-documento)$
+{$tipo-documento$ para optar al título de $titulo-otorgado$}
+$endif$
+
+\vspace{2cm}
+$if(tipo-orientador)$
+{$tipo-orientador$}\\
+$endif$
+$if(nombre-orientador)$
+{$nombre-orientador$, $titulo-orientador$}
+$endif$
+
+\vspace{2cm}
+$if(unidad-academica)$
+{Universidad del Cauca}\\
+{$unidad-academica$}\\
+$endif$
+$if(programa)$
+{$programa$}\\
+$endif$
+$if(ciudad)$
+{$ciudad$}\\
+$endif$
+$if(ano-grado)$
+{$ano-grado$}
+$endif$
+
+}
+
+$endif$
+\newpage
+
+%-------------------------------------------------------------------------------
+%	CITACIÓN
+%-------------------------------------------------------------------------------
+
+\thispagestyle{empty}
+\begin{center}
+\begin{table}
+  \arrayrulecolor{Unicauca}
+  \footnotesize
+  \begin{tabular}{cm{10cm}}
+    \noalign{\color{Unicauca}\hrule height 3pt}
+    \textbf{Cita} & \hspace{2cm}($citacion$, $ano-grado$) \\
+    \hline
+    \textbf{\parbox[c][1.6\height]{5cm}{\centerline{Referencia}
+        \vspace*{0.5cm}\centerline{Estilo APA 7 (2020)}}}
+    & \hspace{-0.5cm}$referencia$ ($ano-grado$). \textit{$title$} [$modalidad-grado$]. Universidad del Cauca, $ciudad$. \\
+    \noalign{\color{Unicauca}\hrule height 3pt}
+  \end{tabular}
+  \arrayrulecolor{black}
+\end{table}
+\end{center}
+%
+$if(licencia-tipo)$
+\vspace{-2.3cm}
+\noindent
+\includegraphics{assets/license/cc-logo.png}\quad
+\includegraphics{$licencia-tipo$}
+$endif$
+
+\vspace{1cm}
+$if(programa)$
+\noindent
+{$programa$ $if(cohorte-posgrado)$ {, Cohorte $cohorte-posgrado$}$endif$}\\
+$endif$
+$if(grupo-investigacion)$
+\noindent
+{Grupo de Investigación $grupo-investigacion$}\\
+$endif$
+$if(centro-investigacion)$
+\noindent
+{$centro-investigacion$}\\
+$endif$
+%
+[1cm]
+%
+\includegraphics{assets/unicauca_horizontal.png}\quad
+%\includegraphics{assets/sis_biblo.png}\\ %En caso de contar con el logo de la biblioteca.
+{$biblioteca$}\\[1cm]
+%
+{\textbf{Repositorio Institucional:} \url{http://repositorio.unicauca.edu.co}}\\[1cm]
+{Universidad del Cauca - \url{https://www.unicauca.edu.co/}}\\[0.5cm]
+%
+$if(rector)$
+{\textbf{Rector:} $rector$}\\
+$endif$
+$if(decano-director)$
+{\textbf{Decano/Director:} $decano-director$}\\
+$endif$
+$if(jefe-departamento)$
+{\textbf{Jefe departamento:} $jefe-departamento$}\\
+$endif$
+%
+[1cm]
+Declaración de derechos de autor. Esta sección puede ser editada en el archivo before-body.tex dentro de la carpeta _extensions/unicauca-thesis/tex. 
+
+\newpage
+
+%-------------------------------------------------------------------------------
+%	CITA
+%-------------------------------------------------------------------------------
+
+$if(cita)$
+
+\thispagestyle{empty}
+
+\vspace*{0.2\textheight}
+
+$if(cita.texto)$
+\noindent``{\itshape $cita.texto$}''\bigbreak
+
+\hfill {$cita.autor$}
+$else$
+\input{``$cita$''}
+$endif$
+
+$endif$
+\newpage
+
+%---------------------------------------------------------------------------------------
+%	DEDICATORIA
+%---------------------------------------------------------------------------------------
+
+$if(dedicatoria)$
+
+\thispagestyle{empty}
+
+\vspace*{0.3\textheight}
+\begin{center}
+{$dedicatoria$}
+\end{center}
+$else$
+\input{"$dedicatoria$"}
+
+$endif$
+\newpage
+
+%-------------------------------------------------------------------------------
+%	AGRADECIMIENTOS
+%-------------------------------------------------------------------------------
+
+$if(agradecimientos)$
+\thispagestyle{empty}
+
+\addchap*{Agradecimientos}
+
+\noindent{$agradecimientos$}
+
+$else$
+\input{"$agradecimientos$"}
+
+$endif$
+\newpage
+
+%-------------------------------------------------------------------------------
+%	TOC, LOT, Y LOF
+%-------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+$if(toc-title)$
+\renewcommand*\contentsname{$toc-title$}
+$endif$
+$if(colorlinks)$
+\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
+$endif$
+$if(toc-depth)$
+\setcounter{tocdepth}{$toc-depth$}
+$endif$
+$if(toc)$
+\tableofcontents
+$endif$
+$if(lot)$
+\listoftables
+$endif$
+$if(lof)$
+\listoffigures
+$endif$
+\endgroup
+
+%-------------------------------------------------------------------------------
+%	ABREVIATURAS
+%-------------------------------------------------------------------------------
+
+$if(abreviaturas)$
+\thispagestyle{empty}
+
+\addchap*{Siglas, acrónimos y abreviaturas}
+
+\noindent\input{"$abreviaturas$"}
+
+$endif$
