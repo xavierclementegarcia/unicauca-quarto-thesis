@@ -1,0 +1,35 @@
+name: Render PDF
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    name: Render Quarto PDF
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up LaTeX
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: index.qmd
+
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render PDF
+        run: quarto render index.qmd --to pdf
+
+      - name: Move PDF to docs/
+        run: |
+          mkdir -p docs
+          mv index.pdf docs/
+
+      - name: Commit and push rendered PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Render PDF automatically"
