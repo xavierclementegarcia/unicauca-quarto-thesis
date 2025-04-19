@@ -1,13 +1,13 @@
-name: Render PDF
+name: Render Quarto Thesis PDF
 
 on:
   push:
-    branches: [main]
+    branches: [main]  # o el nombre de tu rama principal
 
 jobs:
   render:
     runs-on: ubuntu-latest
-    name: Render Quarto PDF
+    name: Render Quarto PDF for GitHub Pages
 
     steps:
       - name: Checkout repository
@@ -16,7 +16,7 @@ jobs:
       - name: Set up LaTeX
         uses: dante-ev/latex-action@latest
         with:
-          root_file: index.qmd
+          root_file: index.qmd  # Asegúrate de que este sea el archivo correcto
 
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -27,7 +27,7 @@ jobs:
       - name: Move PDF to docs/
         run: |
           mkdir -p docs
-          mv index.pdf docs/
+          mv quarto-thesis.pdf docs/
 
       - name: Commit and push rendered PDF
         uses: stefanzweifel/git-auto-commit-action@v5
