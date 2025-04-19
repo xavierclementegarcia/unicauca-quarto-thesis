@@ -1,0 +1,78 @@
+project:
+  type: unicauca-thesis
+  output-dir: docs
+
+lang: es
+date-format: iso
+
+bibliography: references.bib
+csl: apa.csl
+
+book:
+  output-file: "quarto-thesis"
+  date: 2025-01-07
+  site-url: https://xavierclementegarcia.github.io/unicauca-quarto-thesis/
+  repo-url: https://github.com/xavierclementegarcia/unicauca-quarto-thesis/
+  title: "Plantilla para desarrollo de trabajos de grado con Quarto de la Universidad del Cauca"
+  author:
+    - name: "Nombre Primer Autor"
+    #- name: "Nombre Segundo Autor" #Pueden agregarse autores cuanto sea necesario. 
+  chapters:
+    - index.qmd
+    - capitulos/00_introduccion.qmd
+    - capitulos/01_planteamiento-problema.qmd
+    - capitulos/02_justificacion.qmd
+    - capitulos/03_objetivos.qmd
+    - capitulos/04_problema-investigacion.qmd
+    - capitulos/05_hipotesis.qmd
+    - capitulos/06_marco-teorico.qmd
+    - capitulos/07_metodologia.qmd
+    - capitulos/08_resultados.qmd
+    - capitulos/09_discusion.qmd
+    - capitulos/10_conclusiones.qmd
+    - capitulos/11_recomendaciones.qmd
+    - capitulos/12_referencias.qmd
+  appendices: 
+    - anexos/a00_anexos.qmd
+
+tipo-documento: "Tipo de trabajo"
+titulo-otorgado: "Título ortorgado por la Universidad del Cauca"
+tipo-orientador: "Tipo de orientador"
+nombre-orientador: "Nombre del orientador"
+titulo-orientador: "Título académico mas alto"
+unidad-academica: "Facultad, escuela, instituto o corporación"
+programa: "Pregrado o posgrado"
+ciudad: "Ciudad"
+ano-grado: "año de grado"
+
+citacion: "Primer Autor & Segundo Autor" # No incluir el año
+referencia: "Primer Autor, N. & Segundo Autor, N." # Sólo incluir los nombres
+modalidad-grado: "Modalidad de grado"
+
+licencia-tipo: assets/license/by.png
+
+cohorte-posgrado: "cohorte posgrado en numero romano"
+grupo-investigacion: "Nombre grupo de investigación"
+centro-investigacion: "Nombre centro de investigación"
+
+biblioteca: "Nombre biblioteca, CRAI o centro de documentación"
+
+rector: "Nombres y Apellidos del rector"
+decano-director: "Nombres y Apellidos del decano o director"
+jefe-departamento: "Nombres y Apellidos del jefe de departamento"
+
+cita:
+  texto: "Texto de la cita"
+  autor: "Autor de la cita"
+
+dedicatoria: |
+  Texto de dedicatoria
+agradecimientos: |
+  Texto de agradecimientos
+
+# abreviaturas: "abreviaturas.tex"
+
+format:
+  unicauca-thesis-html: default
+  unicauca-thesis-pdf: default
+  # unicauca-thesis-docx: default

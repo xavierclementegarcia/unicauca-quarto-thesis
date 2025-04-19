@@ -1,0 +1,32 @@
+# Licencia {.unnumbered}
+
+![](assets/license/cc-logo.png){height=40} ![]({{< meta licencia-tipo >}}){height=40}
+
+\
+
+{{< meta programa >}}, {{< meta cohorte-posgrado >}}\
+Grupo de Investigación {{< meta grupo-investigacion >}}\
+{{< meta centro-investigacion >}}\
+
+\
+
+![](assets/unicauca_horizontal.png){width="234"}\ 
+{{< meta biblioteca >}}
+
+\
+
+Repositorio Institucional: <http://repositorio.unicauca.edu.co>
+
+\
+
+Universidad de Antioquia - [www.unicauca.edu.co](https://www.unicauca.edu.co/)
+
+<!-- \ -->
+
+**Rector:** {{< meta rector >}}\
+**Decano/Director:** {{< meta decano-director >}}\
+**Jefe departamento:** {{< meta jefe-departamento >}}\
+
+\
+
+El contenido de esta obra corresponde al derecho de expresión de los autores y no compromete el pensamiento institucional de la Universidad del Cauca ni desata su responsabilidad frente a terceros. Los autores asumen la responsabilidad por los derechos de autor y conexos.

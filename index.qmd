@@ -1,0 +1,40 @@
+::: {.content-visible when-format="html"}
+
+{{< include qmd/_index-html.qmd >}}
+
+:::
+
+::: {.content-visible when-format="docx"}
+
+{{< include qmd/_index-docx.qmd >}}
+
+:::
+
+# Resumen {.unnumbered}
+
+\noindent
+El resumen permite identificar la esencia del escrito, mencionando brevemente el objetivo y la metodología, así como los resultados y las conclusiones (mínimo 150, máximo 250 palabras). 
+
+Esta es una demostración de la {{< meta title >}}, diseñada conforme al formato de citación de la @apa2020.
+
+
+*Palabras claves:* artículo científico, artículo de revisión, investigación, estilos de citación
+
+{{< pagebreak >}}
+
+# Abstract {.unnumbered}
+
+\noindent
+El abstract es el mismo resumen pero en idioma inglés. Conserva la misma extensión o aproximada, es decir, mínimo 150 y máximo 250 palabras.
+
+*Keywords:* scientific article, review article, research, citation styles
+
+::: {.content-visible when-format="html"}
+
+{{< include qmd/agradecimientos.qmd >}}
+
+{{< include qmd/citacion.qmd >}}
+
+{{< include qmd/licencia.qmd >}}
+
+:::
