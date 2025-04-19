@@ -11,7 +11,7 @@ $if(title)$
 
 {\centering
 {\bfseries $title$}\\[2cm]
-\includegraphics{assets/unicauca_vertical.png}
+\includegraphics[width=0.2\textwidth]{assets/unicauca_vertical.png}
 \vspace{1cm}
 
 %Datos del autor.
@@ -23,21 +23,24 @@ $if(by-author.name.literal)$
 $endif$
 $endfor$
 $endif$
+\vspace{1cm}
 
-\vspace{2cm}
+%tipo de documento
 $if(tipo-documento)$
 {$tipo-documento$ para optar al título de $titulo-otorgado$}
 $endif$
+\vspace{1cm}
 
-\vspace{2cm}
+% Orientador
 $if(tipo-orientador)$
 {$tipo-orientador$}\\
 $endif$
 $if(nombre-orientador)$
 {$nombre-orientador$, $titulo-orientador$}
 $endif$
+\vspace{1cm}
 
-\vspace{2cm}
+%Universidad
 $if(unidad-academica)$
 {Universidad del Cauca}\\
 {$unidad-academica$}\\
@@ -51,16 +54,13 @@ $endif$
 $if(ano-grado)$
 {$ano-grado$}
 $endif$
-
 }
-
 $endif$
 \newpage
 
 %-------------------------------------------------------------------------------
 %	CITACIÓN
 %-------------------------------------------------------------------------------
-
 \thispagestyle{empty}
 \begin{center}
 \begin{table}
@@ -102,11 +102,11 @@ $endif$
 %
 [1cm]
 %
-\includegraphics{assets/unicauca_horizontal.png}\quad
-%\includegraphics{assets/sis_biblo.png}\\ %En caso de contar con el logo de la biblioteca.
+\includegraphics[width=0.3\textwidth]{assets/unicauca_horizontal.png}\quad
+%\includegraphics[width=0.3\textwidth]{assets/sis_biblo.png}\\ %En caso de contar con el logo de la biblioteca.
 {$biblioteca$}\\[1cm]
 %
-{\textbf{Repositorio Institucional:} \url{http://repositorio.unicauca.edu.co}}\\[1cm]
+{\textbf{Repositorio Institucional:} \url{https://www.unicauca.edu.co/vicerrectoria-academica/division-de-gestion-de-medios-y-recursos-bibliograficos/}}\\[1cm]
 {Universidad del Cauca - \url{https://www.unicauca.edu.co/}}\\[0.5cm]
 %
 $if(rector)$
@@ -121,7 +121,6 @@ $endif$
 %
 [1cm]
 Declaración de derechos de autor.
-
 \newpage
 
 %-------------------------------------------------------------------------------
